@@ -13,9 +13,10 @@
 
 - Zhao, Y., Xie, J., Zhang, H., **Luo, T.**, Zhang, F\*, et al. (2024). **Land-Unet: A Deep Learning Network for Precise Segmentation and Identification of Non-structured Land Use Types in Rural Areas for Green Urban Space Analysis**. *Ecological Informatics*, (SCI JCR Q1, IF=5.8). DOI: [10.1016/j.ecoinf.2025.103078](https://doi.org/10.1016/j.ecoinf.2025.103078).
 
-
 ### Patent 
    Ye, Q., Gao, W., **Luo, T.**, Xu, S., Fu, L. (2023). **A vegetation remote sensing image processing method and system based on semi-supervised deep learning**. *National Invention Patent (China)* (No. CN118155075B).
+
+---
 
 ### 期刊论文
 
