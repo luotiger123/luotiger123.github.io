@@ -10909,6 +10909,34 @@ footer a:hover, footer a:active, footer a:focus {
   text-decoration: underline;
 }
 
+.github-icon {
+  display: inline-block;
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.github-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
 
+/* 教育经历区块样式 */
+.education-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-left: 4px solid #165dff;
+  border-radius: 12px;
+}
+.education-item h4 {
+  color: #0a2463;
+  margin-bottom: 0.5rem;
+}
+.education-item ul {
+  padding-left: 1.5rem;
+  color: #333;
+}
 
 
