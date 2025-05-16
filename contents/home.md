@@ -1,9 +1,3 @@
-<!-- GitHub 图标链接 -->
-<a href="https://github.com/luotiger123" target="_blank" class="github-icon">
-  [![taige](https://img.shields.io/badge/Profile-GitHub-blue?logo=github)](https://github.com/luotiger123)
-</a>
-
-
 ## 🎓 Education Experiences
 
 ### 🌍 English Version
@@ -21,7 +15,6 @@
 - **Supervisor**: Dr. Sheng Xu
 - **Thesis Research**:  
   Developed algorithms for Individual Tree Segmentation (ITS) and fine-grained leaf phenotype analysis in UAV-RGB imagery for intelligent forestry breeding.
-
 ### 🌏 Chinese Version
 #### 弗吉尼亚理工大学地理信息科学硕士研究生
 **2025 年 9 月 – 2027 年 6 月** | 地理系
