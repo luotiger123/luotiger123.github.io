@@ -44,30 +44,25 @@
 <body class="font-inter bg-light text-dark">
 <!-- Navigation -->
 <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm">
-  <div class="container mx-auto px-4 py-3">
-    <div class="flex justify-between items-center">
-      <a href="index.html" class="text-primary font-bold text-xl">Taige</a>
-
-      <div class="hidden md:flex space-x-8">
-        <a href="index.html" class="text-dark hover:text-primary transition-colors">About</a>
-        <a href="publications.html" class="text-dark hover:text-primary transition-colors">Publications</a>
-        <a href="gallery.html" class="text-dark hover:text-primary transition-colors">Gallery</a>
-      </div>
-
-      <button id="menu-toggle" class="md:hidden text-dark hover:text-primary">
-        <i class="fa fa-bars text-xl"></i>
-      </button>
+    <div class="container mx-auto px-4 py-3">
+        <a href="index.html" class="text-primary font-bold text-xl">Taige</a>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-dark hover:text-primary transition-colors">About</a>
+            <a href="publications.html" class="text-dark hover:text-primary transition-colors">Publications</a>
+            <a href="gallery.html" class="text-dark hover:text-primary transition-colors">Gallery</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-dark hover:text-primary">
+            <i class="fa fa-bars text-xl"></i>
+        </button>
     </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
-    <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
-      <a href="index.html" class="text-dark hover:text-primary transition-colors py-2">About</a>
-      <a href="publications.html" class="text-dark hover:text-primary transition-colors py-2">Publications</a>
-      <a href="gallery.html" class="text-dark hover:text-primary transition-colors py-2">Gallery</a>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+            <a href="index.html" class="text-dark hover:text-primary transition-colors py-2">About</a>
+            <a href="publications.html" class="text-dark hover:text-primary transition-colors py-2">Publications</a>
+            <a href="gallery.html" class="text-dark hover:text-primary transition-colors py-2">Gallery</a>
+        </div>
     </div>
-  </div>
 </nav>
 
 <!-- Hero Section -->
@@ -85,12 +80,8 @@
                     <a href="https://github.com/luotiger123" target="_blank" class="bg-dark hover:bg-dark/90 text-white px-3 py-1.5 rounded-lg transition-custom shadow-md hover:shadow-lg text-xs">
                         <i class="fa-brands fa-github mr-1"></i> GitHub
                     </a>
-                    <a href="https://scholar.google.com/citations?user=vmZpJxsAAAAJ&hl=en&oi=ao" target="_blank" class="bg-primary hover:bg-primary/90 text-white px-3 py-1.5 rounded-lg transition-custom shadow-md hover:shadow-lg text-xs">
-                        <i class="fa-brands fa-linkedin mr-1"></i> Google Scholar
-                    </a>
-                    <a href="static/assets/cv/CV-TaigeUSA.pdf" target="_blank"
-                        class="bg-white hover:bg-gray-50 text-dark border border-gray-200 px-3 py-1.5 rounded-lg transition-custom shadow-md hover:shadow-lg text-xs">
-                        <i class="fa-solid fa-file-lines mr-1"></i> CV
+                    <a href="https://github.com/luotiger123" target="_blank" class="bg-primary hover:bg-primary/90 text-white px-3 py-1.5 rounded-lg transition-custom shadow-md hover:shadow-lg text-xs">
+                        <i class="fa-brands fa-linkedin mr-1"></i> LinkedIn
                     </a>
                 </div>
             </div>
@@ -106,86 +97,63 @@
 </header>
 
 <main>
-    <!-- About & Education Section -->
-    <section id="about" class="py-12 bg-white">
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-12 bg-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="bg-light p-6 md:p-8 rounded-2xl shadow-lg">
-                    <div class="flex flex-col md:flex-row gap-8">
-                        <div class="md:w-3/5">
-                            <h2 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold text-dark mb-4">About Me</h2>
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold text-dark mb-6">Activity Gallery</h2>
 
-                            <p class="text-gray-700 leading-relaxed mb-4 text-align-justify">
-                            I am Taige Luo from Nanjing, Jiangsu, China. My research focuses on the intersection of remote sensing and artificial intelligence. My current research can be broadly summarized into two main directions: (1) fine-grained intelligent extraction of vegetation phenotypes using Lidar Point Cloud data, and (2) large-scale vegetation parameter mapping using very high resolution (VHR) remote sensing imagery. In addition, I have participated in several research projects related to urban informatics, including land-use mapping and park population monitoring. These studies aim to better understand urban environments and improve spatial decision-making through geospatial data analysis. My goal is to leverage novel intelligence models to address longstanding challenges in geoscience and to develop more accurate and reliable geospatial products. I hope that my research can be applied to a wider range of downstream applications and contribute to advancing geospatial science.
-                            </p>
-                            
-                        </div>
-                        <div class="md:w-2/5">
-                            <h2 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold text-dark mb-4">Education</h2>
-                            <!-- Education Timeline -->
-                            <div class="relative pl-6 space-y-6">
-
-                                <!-- Timeline Line -->
-                                <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-primary/30 transition-all duration-500"></div>
-
-                                <!-- Master's Degree -->
-                                <div class="relative group">
-                                    <div class="absolute left-0 top-1 -translate-x-1/2 w-3 h-3 rounded-full bg-primary transition-all duration-300 group-hover:w-4 group-hover:h-4 group-hover:bg-primary/80"></div>
-
-                                    <div class="bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-l-2 border-primary">
-
-                                        <span class="text-primary font-semibold text-sm">2025 – Present</span>
-
-                                        <h3 class="font-bold mt-1 mb-1 text-lg">
-                                            M.S. in Geography
-                                        </h3>
-
-                                        <p class="text-gray-600 text-sm leading-relaxed">
-                                            Department of Geography<br>
-                                            College of Natural Resources and Environment<br>
-                                            Virginia Tech, Blacksburg, VA, USA
-                                        </p>
-
-                                        <p class="text-gray-500 text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            Research focus: Remote Sensing and Artificial Intelligence.
-                                        </p>
-
-                                    </div>
-                                </div>
-
-
-                                <!-- Bachelor's Degree -->
-                                <div class="relative group">
-                                    <div class="absolute left-0 top-1 -translate-x-1/2 w-3 h-3 rounded-full bg-primary transition-all duration-300 group-hover:w-4 group-hover:h-4 group-hover:bg-primary/80"></div>
-
-                                    <div class="bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-l-2 border-primary">
-
-                                        <span class="text-primary font-semibold text-sm">2021 – 2025</span>
-
-                                        <h3 class="font-bold mt-1 mb-1 text-lg">
-                                            B.S. in Software Engineering
-                                        </h3>
-
-                                        <p class="text-gray-600 text-sm leading-relaxed">
-                                            College of Information Science and Technology & Artificial Intelligence<br>
-                                            Nanjing Forestry University, Nanjing, Jiangsu, China
-                                        </p>
-
-                                        <p class="text-gray-500 text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            Focus on programming, algorithms, and geospatial data processing.
-                                        </p>
-
-                                    </div>
-                                </div>
-
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Gallery Item 1 -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                        <img src="static/assets/img/cd.jpg" alt="Conference presentation" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-5">
+                                <h3 class="text-white font-bold text-lg">International Computers Conference</h3>
+                                <p class="text-white/80 mt-1 text-sm">Presenting my research on interpretability methods</p>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                        <img src="static/assets/img/xiamen.jpg" alt="Workshop" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-5">
+                                <h3 class="text-white font-bold text-lg">Summer Camp of Xiamen University</h3>
+                                <p class="text-white/80 mt-1 text-sm">Listen to the lecture</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+                        <img src="static/assets/img/ce.jpg" alt="Workshop" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-5">
+                                <h3 class="text-white font-bold text-lg">Field Measurement</h3>
+                                <p class="text-white/80 mt-1 text-sm">Measure the DBH data of poplar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="gallery-modal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+                    <button id="close-modal" class="absolute top-5 right-5 text-white text-2xl hover:text-gray-300 transition-colors">
+                        <i class="fa fa-times"></i>
+                    </button>
+                    <div class="container mx-auto px-4">
+                        <img id="modal-image" src="" alt="Gallery image" class="max-h-[80vh] mx-auto">
+                        <h3 id="modal-title" class="text-white text-lg font-bold mt-3"></h3>
+                        <p id="modal-description" class="text-white/80 mt-1 text-sm"></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 </main>
 
 <!-- Footer -->
@@ -266,7 +234,7 @@
     });
 
     // Gallery modal functionality
-    const galleryItems = document.querySelectorAll('#gallery .group');
+    const galleryItems = document.querySelectorAll('.group');
     const galleryModal = document.getElementById('gallery-modal');
     const modalImage = document.getElementById('modal-image');
     const modalTitle = document.getElementById('modal-title');

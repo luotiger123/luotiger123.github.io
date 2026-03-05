@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taige's Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#722ED1',
+                        accent: '#FF7D00',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .hover-scale {
+                @apply hover:scale-105 transition-all duration-300;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-light text-dark">
+<!-- Navigation -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm">
+    <div class="container mx-auto px-4 py-3">
+        <a href="index.html" class="text-primary font-bold text-xl">Taige</a>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-dark hover:text-primary transition-colors">About</a>
+            <a href="publications.html" class="text-dark hover:text-primary transition-colors">Publications</a>
+            <a href="gallery.html" class="text-dark hover:text-primary transition-colors">Gallery</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-dark hover:text-primary">
+            <i class="fa fa-bars text-xl"></i>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+            <a href="index.html" class="text-dark hover:text-primary transition-colors py-2">About</a>
+            <a href="publications.html" class="text-dark hover:text-primary transition-colors py-2">Publications</a>
+            <a href="gallery.html" class="text-dark hover:text-primary transition-colors py-2">Gallery</a>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-12 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold text-dark mb-6">Publications</h2>
+
+                <div class="space-y-5">
+                    <!-- Publication 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/12">
+                                <img src="static/assets/img/cea.png" alt="Paper cover" class="w-full h-full object-cover">
+                            </div>
+                            <div class="md:w-10/12 p-4">
+                                <div class="flex flex-col md:flex-row md:items-center">
+                                    <div class="md:w-1/12 mb-2 md:mb-0">
+                                        <span class="bg-primary/10 text-primary text-xs font-semibold px-2 py-0.5 rounded-full inline-block">2025</span>
+                                    </div>
+                                    <div class="md:w-11/12 md:pl-3">
+                                        <h3 class="text-base font-bold mb-1">LeafInst: Unified Instance Segmentation Network for Fine-Grained Forestry Leaf Phenotype Analysis with UAV Remote Sensing</h3>
+                                        <p class="text-gray-600 mb-1 text-xs">
+                                            <span class="font-medium underline decoration-black-10 decoration-2 underline-offset-4">Luo, T.</span>, Xie, J., Fan, C, Wang, R., Shao, Y., Xu, S*, Cao, L.
+                                        </p>
+                                        <p class="text-gray-700 font-medium mb-1 text-xs">
+                                            <i>Computers and Electronics in Agriculture</i>, (SCI JCR Q1, IF=8.9). Under Review.
+                                        </p>
+                                        <div class="flex space-x-3 text-xs">
+                                            <a href="http://arxiv.org/abs/2603.03616" class="text-primary hover:text-primary/80 font-medium">
+                                                <i class="fa fa-file-pdf mr-1"></i> PDF
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/12">
+                                <img src="static/assets/img/vrs.png" alt="Paper cover" class="w-full h-full object-cover">
+                            </div>
+                            <div class="md:w-10/12 p-4">
+                                <div class="flex flex-col md:flex-row md:items-center">
+                                    <div class="md:w-1/12 mb-2 md:mb-0">
+                                        <span class="bg-primary/10 text-primary text-xs font-semibold px-2 py-0.5 rounded-full inline-block">2024</span>
+                                    </div>
+                                    <div class="md:w-11/12 md:pl-3">
+                                        <h3 class="text-base font-bold mb-1">VrsNet-density map prediction network for individual tree detection and counting from UAV images</h3>
+                                        <p class="text-gray-600 mb-1 text-xs">
+                                            <span class="font-medium underline decoration-black-10 decoration-2 underline-offset-4">Luo, T.</span>, Gao, W., Belotserkovsky, A., Nedzved, A., Xu, S*, et al.
+                                        </p>
+                                        <p class="text-gray-700 font-medium mb-1 text-xs">
+                                            <i>International Journal of Applied Earth Observation and Geoinformation</i>, (SCI JCR Q1, IF=8.6).
+                                        </p>
+                                        <div class="flex space-x-3 text-xs">
+                                            <a href="https://doi.org/10.1016/j.jag.2024.103923" target="_blank" class="text-primary hover:text-primary/80 font-medium">
+                                                <i class="fa fa-file-pdf mr-1"></i> PDF
+                                            </a>
+                                            <a href="https://doi.org/10.1016/j.jag.2024.103923" target="_blank" class="text-primary hover:text-primary/80 font-medium">
+                                                <i class="fa fa-external-link mr-1"></i> DOI
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/12">
+                                <img src="static/assets/img/wave.png" alt="Paper cover" class="w-full h-full object-cover">
+                            </div>
+                            <div class="md:w-10/12 p-4">
+                                <div class="flex flex-col md:flex-row md:items-center">
+                                    <div class="md:w-1/12 mb-2 md:mb-0">
+                                        <span class="bg-primary/10 text-primary text-xs font-semibold px-2 py-0.5 rounded-full inline-block">2024</span>
+                                    </div>
+                                    <div class="md:w-11/12 md:pl-3">
+                                        <h3 class="text-base font-bold mb-1">A Novel WaveInst-based Network for Tree Trunk Structure Extraction and Pattern Analysis in Forest Inventory</h3>
+                                        <p class="text-gray-600 mb-1 text-xs">
+                                            Fan, C., Zhu, X., <span class="font-medium underline decoration-black-10 decoration-2 underline-offset-4">Luo, T.</span>, Chen, Z., Ye, Q., & Xu, S*
+                                        </p>
+                                        <p class="text-gray-700 font-medium mb-1 text-xs">
+                                            <i>IEEE Transactions on Geoscience and Remote Sensing</i> (SCI JCR Q1, IF=8.6). Minor Revision.
+                                        </p>
+                                        <div class="flex space-x-3 text-xs">
+                                            <a href="https://arxiv.org/abs/2505.01656" class="text-primary hover:text-primary/80 font-medium">
+                                                <i class="fa fa-file-pdf mr-1"></i> PDF
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Publication 4 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/12">
+                                <img src="static/assets/img/yo.png" alt="Paper cover" class="w-full h-full object-cover">
+                            </div>
+                            <div class="md:w-10/12 p-4">
+                                <div class="flex flex-col md:flex-row md:items-center">
+                                    <div class="md:w-1/12 mb-2 md:mb-0">
+                                        <span class="bg-primary/10 text-primary text-xs font-semibold px-2 py-0.5 rounded-full inline-block">2024</span>
+                                    </div>
+                                    <div class="md:w-11/12 md:pl-3">
+                                        <h3 class="text-base font-bold mb-1">YOLOTree-Individual Tree Spatial Positioning and Crown Volume Calculation Using UAV-RGB Imagery and LiDAR Data</h3>
+                                        <p class="text-gray-600 mb-1 text-xs">
+                                            <span class="font-medium underline decoration-black-10 decoration-2 underline-offset-4">Luo, T.</span>, Ma, W., Chen, Q., Wu, D*, et al.
+                                        </p>
+                                        <p class="text-gray-700 font-medium mb-1 text-xs">
+                                            <i>Forests - Panoptic Segmentation of Tree Scenes from Mobile LiDAR Data</i>, (SCI JCR Q1, IF=2.4).
+                                        </p>
+                                        <div class="flex space-x-3 text-xs">
+                                            <a href="https://doi.org/10.3390/f15081375" target="_blank" class="text-primary hover:text-primary/80 font-medium">
+                                                <i class="fa fa-file-pdf mr-1"></i> PDF
+                                            </a>
+                                            <a href="https://doi.org/10.3390/f15081375" target="_blank" class="text-primary hover:text-primary/80 font-medium">
+                                                <i class="fa fa-external-link mr-1"></i> DOI
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 5 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-2/12">
+                                <img src="static/assets/img/ei.png" alt="Paper cover" class="w-full h-full object-cover">
+                            </div>
+                            <div class="md:w-10/12 p-4">
+                                <div class="flex flex-col md:flex-row md:items-center">
+                                    <div class="md:w-1/12 mb-2 md:mb-0">
+                                        <span class="bg-primary/10 text-primary text-xs font-semibold px-2 py-0.5 rounded-full inline-block">2024</span>
+                                    </div>
+                                    <div class="md:w-11/12 md:pl-3">
+                                        <h3 class="text-base font-bold mb-1">Land-Unet: A Deep Learning Network for Precise Segmentation and Identification of Non-structured Land Use Types in Rural Areas for Green Urban Space Analysis</h3>
+                                        <p class="text-gray-600 mb-1 text-xs">
+                                            Zhao, Y., Xie, J., Zhang, H., <span class="font-medium underline decoration-black-10 decoration-2 underline-offset-4">Luo, T.</span>, Zhang, F*, et al.
+                                        </p>
+                                        <p class="text-gray-700 font-medium mb-1 text-xs">
+                                            <i>Ecological Informatics</i>, (SCI JCR Q1, IF=5.8).
+                                        </p>
+                                        <div class="flex space-x-3 text-xs">
+                                            <a href="https://doi.org/10.1016/j.ecoinf.2025.103078" target="_blank" class="text-primary hover:text-primary/80 font-medium">
+                                                <i class="fa fa-file-pdf mr-1"></i> PDF
+                                            </a>
+                                            <a href="https://doi.org/10.1016/j.ecoinf.2025.103078" target="_blank" class="text-primary hover:text-primary/80 font-medium">
+                                                <i class="fa fa-external-link mr-1"></i> DOI
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h2 class="text-xl font-bold">Taige Luo</h2>
+            </div>
+
+            <div class="flex space-x-5 mb-4 md:mb-0">
+                <a href="https://github.com/luotiger123" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+                <a href="https://github.com/luotiger123" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fa-brands fa-twitter text-xl"></i>
+                </a>
+                <a href="https://github.com/luotiger123" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fa-brands fa-linkedin text-xl"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=vmZpJxsAAAAJ&hl=zh-CN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fa-brands fa-google-scholar text-xl"></i>
+                </a>
+            </div>
+
+            <div>
+                <p class="text-gray-400 text-sm">Contact: <a href="" class="text-white hover:text-gray-300 transition-colors">taige@vt.edu</a></p>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Taige Luo. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 30) {
+            navbar.classList.add('py-2', 'shadow-md');
+            navbar.classList.remove('py-3', 'shadow-sm');
+        } else {
+            navbar.classList.add('py-3', 'shadow-sm');
+            navbar.classList.remove('py-2', 'shadow-md');
+        }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Gallery modal functionality
+    const galleryItems = document.querySelectorAll('.group');
+    const galleryModal = document.getElementById('gallery-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const closeModal = document.getElementById('close-modal');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const image = this.querySelector('img');
+            const title = this.querySelector('h3').textContent;
+            const description = this.querySelector('p').textContent;
+
+            modalImage.src = image.src;
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+
+            galleryModal.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    closeModal.addEventListener('click', function() {
+        galleryModal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'auto';
+    });
+
+    // Close modal when clicking outside the image
+    galleryModal.addEventListener('click', function(e) {
+        if (e.target === galleryModal) {
+            galleryModal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
+</body>
+</html>
