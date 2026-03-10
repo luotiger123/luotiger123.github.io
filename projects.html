@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Taige Luo</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors:{
+ink:'#202124',
+muted:'#5f6368',
+line:'#e5e7eb',
+page:'#f3f4f6',
+link:'#1a73e8'
+},
+boxShadow:{
+card:'0 1px 2px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.04)'
+}
+}
+}
+}
+</script>
+
+</head>
+
+<body class="bg-page text-ink font-sans">
+
+<!-- Navigation -->
+<nav class="sticky top-0 bg-white border-b border-line z-50">
+<div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+
+<a href="index.html" class="font-semibold text-lg">Homepage</a>
+
+<div class="flex gap-8 text-muted text-sm">
+<a href="index.html" class="hover:text-ink">Home</a>
+<a href="publications.html" class="hover:text-ink">Publications</a>
+<a href="projects.html" class="text-ink font-medium">Projects</a>
+<a href="gallery.html" class="hover:text-ink">Showcase</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- Page -->
+<main class="max-w-6xl mx-auto px-6 py-10">
+
+<h1 class="text-3xl font-semibold mb-8">Projects & Datasets</h1>
+
+
+<div class="space-y-8">
+
+
+<!-- Project Card -->
+
+</div>
+<div class="flex items-start gap-6 p-6 bg-white border border-line rounded-xl shadow-card hover:shadow-lg transition">
+
+<img src="static/assets/img/poplar.png"
+class="w-[180px] h-[180px] object-cover rounded-lg border border-gray-200">
+
+<div class="flex-1">
+
+<h2 class="text-xl font-semibold">
+Poplar-leaf – A UAV benchmark dataset for forestry leaf instance segmentation
+</h2>
+
+<p class="text-muted mt-3 leading-7 text-sm">
+
+Poplar-leaf is a UAV-based benchmark dataset designed for forestry leaf phenotyping and instance segmentation. 
+The dataset was collected in a poplar plantation located in Huanghai Seaside National Forest Park, Dongtai City, Jiangsu Province, China (32°51'N, 120°50'E).
+
+Images were captured using a <b>DJI M350RTK UAV equipped with a P1 camera</b>, flying at an altitude of 5 meters along pre-planned routes to acquire multi-angle canopy views.
+
+The dataset contains <b>1,202 labeled images</b> with <b>19,876 leaf instances</b> and <b>1,202 leaf branches</b>, each with a resolution of <b>1024 × 1024</b>. 
+Pixel-level instance annotations were created using <b>LabelMe</b>, with initial segmentation assisted by the <b>SAM model</b> and refined through manual verification by an 8-person annotation team.
+
+</p>
+
+<div class="mt-4 flex items-center gap-4 text-sm">
+
+<a href="https://www.kaggle.com/datasets/vvghigh/poplar"
+target="_blank"
+class="text-link hover:underline flex items-center gap-1">
+
+<i class="fa-solid fa-database"></i>
+Dataset on Kaggle
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="flex items-start gap-6 p-6 bg-white border border-line rounded-xl shadow-card hover:shadow-lg transition">
+
+<img src="static/assets/img/Ruraluse.png"
+class="w-[180px] h-[180px] object-cover rounded-lg border border-gray-200">
+
+<div class="flex-1">
+
+<h2 class="text-xl font-semibold">
+RuralUse – A dataset for semantic segmentation in rural land use analysis
+</h2>
+
+<p class="text-muted mt-3 leading-7 text-sm">
+
+RuralUse is a dataset designed for semantic segmentation in rural land use analysis, created using open-source data from Google Earth Engine (GEE).  
+
+The dataset was produced and made publicly available by Jiangsu Open University. It consists of 2,042 RGB images, each with a size of 224 × 224 pixels.
+
+Annotations are provided in JSON format (Labelme) along with mask annotation files, making the dataset convenient for deep learning training and evaluation.
+
+</p>
+
+<div class="mt-4 flex items-center gap-4 text-sm">
+
+<a href="https://www.kaggle.com/datasets/vvghigh/ruraluse" target="_blank"
+class="text-link hover:underline flex items-center gap-1">
+
+<i class="fa-solid fa-database"></i>
+Dataset on Kaggle
+
+</a>
+
+</div>
+
+</div>
+
+
+
+
+<!-- Example second project placeholder -->
+<!-- 复制这个块即可新增项目 -->
+
+<!--
+<div class="flex items-start gap-6 p-6 bg-white border border-line rounded-xl shadow-card hover:shadow-lg transition">
+
+<img src="static/assets/img/project.png"
+class="w-[180px] h-[120px] object-cover rounded-lg border border-gray-200">
+
+<div>
+
+<h2 class="text-xl font-semibold">
+Project Name
+</h2>
+
+<p class="text-muted mt-3 leading-7 text-sm">
+Project description here.
+</p>
+
+<div class="mt-4">
+<a href="#" class="text-link hover:underline">Project Link</a>
+</div>
+
+</div>
+
+</div>
+-->
+
+
+</div>
+
+
+</main>
+
+</body>
+</html>

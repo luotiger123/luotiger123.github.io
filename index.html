@@ -1,305 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taige's Homepage</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#165DFF',
-                        secondary: '#722ED1',
-                        accent: '#FF7D00',
-                        dark: '#1D2129',
-                        light: '#F2F3F5'
-                    },
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taige Luo | Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#202124',
+            muted: '#5f6368',
+            line: '#e5e7eb',
+            page: '#f3f4f6',
+            link: '#1a73e8'
+          },
+          boxShadow: {
+            card: '0 1px 2px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.04)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
         }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .transition-custom {
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-            .hover-scale {
-                @apply hover:scale-105 transition-all duration-300;
-            }
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .text-justify-custom { text-align: justify; text-justify: inter-word; }
+  </style>
 </head>
-<body class="font-inter bg-light text-dark">
-<!-- Navigation -->
-<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm">
-  <div class="container mx-auto px-4 py-3">
-    <div class="flex justify-between items-center">
-      <a href="index.html" class="text-primary font-bold text-xl">Taige</a>
+<body class="bg-page text-ink font-sans antialiased">
 
-      <div class="hidden md:flex space-x-8">
-        <a href="index.html" class="text-dark hover:text-primary transition-colors">About</a>
-        <a href="publications.html" class="text-dark hover:text-primary transition-colors">Publications</a>
-        <a href="gallery.html" class="text-dark hover:text-primary transition-colors">Gallery</a>
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between">
+      <a href="index.html" class="font-semibold text-[1.05rem] tracking-tight">Homepage</a>
+
+      <div class="hidden md:flex items-center gap-8 text-[15px] text-muted">
+        <a href="index.html" class="hover:text-ink transition-colors">Home</a>
+        <a href="publications.html" class="hover:text-ink transition-colors">Publications</a>
+        <a href="projects.html" class="hover:text-ink transition-colors">Projects</a>
+        <a href="gallery.html" class="hover:text-ink transition-colors">Gallery</a>
       </div>
 
-      <button id="menu-toggle" class="md:hidden text-dark hover:text-primary">
-        <i class="fa fa-bars text-xl"></i>
+      <button id="menuBtn" class="md:hidden text-xl text-muted hover:text-ink">
+        <i class="fa-solid fa-bars"></i>
       </button>
     </div>
-  </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
-    <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
-      <a href="index.html" class="text-dark hover:text-primary transition-colors py-2">About</a>
-      <a href="publications.html" class="text-dark hover:text-primary transition-colors py-2">Publications</a>
-      <a href="gallery.html" class="text-dark hover:text-primary transition-colors py-2">Gallery</a>
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-line">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm text-muted">
+        <a href="index.html" class="hover:text-ink">Home</a>
+        <a href="publications.html" class="hover:text-ink">Publications</a>
+        <a href="projects.html" class="hover:text-ink">Projects</a>
+        <a href="gallery.html" class="hover:text-ink">Gallery</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Hero Section -->
-<header class="pt-16 pb-8 bg-gradient-to-br from-primary/5 to-secondary/5">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-4 md:mb-0">
-                <h1 class="text-[clamp(1.25rem,2.5vw,2rem)] font-bold leading-tight text-dark">
-                    Hello, I'm <span class="text-primary">Taige Luo</span>
-                </h1>
-                <p class="text-[clamp(0.85rem,1vw,1rem)] text-gray-600 mt-1.5 mb-3 max-w-xl">
-                    Research Interest - Application of Vision-AI models on RS/GEO
-                </p>
-                <div class="flex space-x-2">
-                    <a href="https://github.com/luotiger123" target="_blank" class="bg-dark hover:bg-dark/90 text-white px-3 py-1.5 rounded-lg transition-custom shadow-md hover:shadow-lg text-xs">
-                        <i class="fa-brands fa-github mr-1"></i> GitHub
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=vmZpJxsAAAAJ&hl=en&oi=ao" target="_blank" class="bg-primary hover:bg-primary/90 text-white px-3 py-1.5 rounded-lg transition-custom shadow-md hover:shadow-lg text-xs">
-                        <i class="fa-brands fa-linkedin mr-1"></i> Google Scholar
-                    </a>
-                    <a href="static/assets/cv/CV-TaigeUSA.pdf" target="_blank"
-                        class="bg-white hover:bg-gray-50 text-dark border border-gray-200 px-3 py-1.5 rounded-lg transition-custom shadow-md hover:shadow-lg text-xs">
-                        <i class="fa-solid fa-file-lines mr-1"></i> CV
-                    </a>
-                </div>
+  <main class="max-w-6xl mx-auto px-4 md:px-6 py-6 space-y-5">
+
+    <!-- Main Profile Card -->
+    <section class="bg-white border border-line rounded-xl shadow-card p-6 md:p-8 lg:p-10">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_210px] gap-8 items-start">
+
+        <div>
+          <h1 class="text-4xl md:text-[3rem] leading-tight font-semibold tracking-tight">Taige Luo</h1>
+          <p class="mt-3 text-[1.05rem] text-muted flex items-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-gray-500"></i>
+            M.S. Student in Geography
+          </p>
+
+          <div class="mt-6 space-y-5 text-[1.02rem] leading-8 text-justify-custom text-gray-700">
+            <p>
+              I am Taige Luo from Nanjing, Jiangsu, China. My research focuses on the intersection of remote sensing and artificial intelligence, with an emphasis on vegetation structure understanding and large-scale geospatial mapping.
+            </p>
+
+            <p>
+              During my undergraduate studies at Nanjing Forestry University, I worked under the supervision of <span class="font-medium text-ink">Dr. Sheng Xu</span> on forestry remote sensing research. My work mainly focused on individual-tree level analysis, including <span class="font-medium text-ink">fine-grained individual tree crown detection</span>, <span class="font-medium text-ink">individual tree density estimation</span>, and <span class="font-medium text-ink">intelligent leaf phenotyping</span> using computer vision techniques.
+            </p>
+
+            <p>
+              I am currently pursuing a Master’s degree in Geography at Virginia Tech under the supervision of <span class="font-medium text-ink">Dr. Yang Shao</span>. My current research focuses on <span class="font-medium text-ink">large-scale remote sensing mapping</span>, particularly <span class="font-medium text-ink">cross-city applications</span>. I work on integrating multi-source remote sensing data, including <span class="font-medium text-ink">optical imagery</span>, <span class="font-medium text-ink">SAR radar</span>, and <span class="font-medium text-ink">LiDAR-derived elevation data</span>, to perform <span class="font-medium text-ink">three-dimensional forest canopy mapping</span> and improve the reliability of large-area vegetation products.
+            </p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-[270px_1fr] gap-8 items-start">
+            <div class="flex justify-center md:justify-start">
+                <img 
+                    src="static/assets/img/Re.png"
+                    alt="Research diagram"
+                    class="w-full max-w-[500px] lg:max-w-[540px] h-auto object-contain"
+                >
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="relative">
-                    <div class="w-36 h-36 md:w-48 md:h-48 rounded-full bg-gradient-to-tr from-primary to-secondary overflow-hidden shadow-xl">
-                        <img src="static/assets/img/photo.png" alt="John Doe" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
-                    </div>
-                </div>
+
+            <div class="md:pl-10 lg:pl-14">
+              <h2 class="text-[1.55rem] font-semibold mb-4">Research Interests</h2>
+              <ul class="space-y-2.5 text-[1rem] text-gray-700 list-disc pl-5 leading-7">
+                <li>GeoAI and deep learning for remote sensing</li>
+                <li>Individual tree detection and forest structure analysis</li>
+                <li>Multi-source remote sensing fusion using optical, SAR, and LiDAR data</li>
+                <li>Large-scale vegetation mapping and cross-city generalization</li>
+                <li>Three-dimensional forest canopy structure modeling</li>
+                <li>Intelligent vegetation phenotyping and geospatial product generation</li>
+              </ul>
             </div>
+          </div>
+
+          <div class="mt-7">
+            <a href="static/assets/cv/CV-TaigeUSA.pdf" target="_blank" class="inline-flex items-center gap-2 text-link hover:underline text-[1rem]">
+              <i class="fa-solid fa-file-lines"></i>
+              Curriculum Vitae
+            </a>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-line flex flex-wrap gap-x-6 gap-y-3 text-link text-[1rem]">
+            <a href="mailto:taige@vt.edu" class="hover:underline"><i class="fa-solid fa-at mr-1"></i> taige@vt.edu</a>
+            <a href="https://scholar.google.com/citations?user=vmZpJxsAAAAJ&hl=en&oi=ao" target="_blank" class="hover:underline"><i class="fa-brands fa-google-scholar mr-1"></i> Google Scholar</a>
+            <a href="https://github.com/luotiger123" target="_blank" class="hover:underline"><i class="fa-brands fa-github mr-1"></i> GitHub</a>
+            <a href="#" class="hover:underline"><i class="fa-brands fa-weixin mr-1"></i> WeChat</a>
+          </div>
         </div>
-    </div>
-</header>
 
-<main>
-    <!-- About & Education Section -->
-    <section id="about" class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="bg-light p-6 md:p-8 rounded-2xl shadow-lg">
-                    <div class="flex flex-col md:flex-row gap-8">
-                        <div class="md:w-3/5">
-                            <h2 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold text-dark mb-4">About Me</h2>
-
-                            <p class="text-gray-700 leading-relaxed mb-4 text-align-justify">
-                            I am Taige Luo from Nanjing, Jiangsu, China. My research focuses on the intersection of remote sensing and artificial intelligence. My current research can be broadly summarized into two main directions: (1) fine-grained intelligent extraction of vegetation phenotypes using Lidar Point Cloud data, and (2) large-scale vegetation parameter mapping using very high resolution (VHR) remote sensing imagery. In addition, I have participated in several research projects related to urban informatics, including land-use mapping and park population monitoring. These studies aim to better understand urban environments and improve spatial decision-making through geospatial data analysis. My goal is to leverage novel intelligence models to address longstanding challenges in geoscience and to develop more accurate and reliable geospatial products. I hope that my research can be applied to a wider range of downstream applications and contribute to advancing geospatial science.
-                            </p>
-                            
-                        </div>
-                        <div class="md:w-2/5">
-                            <h2 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold text-dark mb-4">Education</h2>
-                            <!-- Education Timeline -->
-                            <div class="relative pl-6 space-y-6">
-
-                                <!-- Timeline Line -->
-                                <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-primary/30 transition-all duration-500"></div>
-
-                                <!-- Master's Degree -->
-                                <div class="relative group">
-                                    <div class="absolute left-0 top-1 -translate-x-1/2 w-3 h-3 rounded-full bg-primary transition-all duration-300 group-hover:w-4 group-hover:h-4 group-hover:bg-primary/80"></div>
-
-                                    <div class="bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-l-2 border-primary">
-
-                                        <span class="text-primary font-semibold text-sm">2025 – Present</span>
-
-                                        <h3 class="font-bold mt-1 mb-1 text-lg">
-                                            M.S. in Geography
-                                        </h3>
-
-                                        <p class="text-gray-600 text-sm leading-relaxed">
-                                            Department of Geography<br>
-                                            College of Natural Resources and Environment<br>
-                                            Virginia Tech, Blacksburg, VA, USA
-                                        </p>
-
-                                        <p class="text-gray-500 text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            Research focus: Remote Sensing and Artificial Intelligence.
-                                        </p>
-
-                                    </div>
-                                </div>
-
-
-                                <!-- Bachelor's Degree -->
-                                <div class="relative group">
-                                    <div class="absolute left-0 top-1 -translate-x-1/2 w-3 h-3 rounded-full bg-primary transition-all duration-300 group-hover:w-4 group-hover:h-4 group-hover:bg-primary/80"></div>
-
-                                    <div class="bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-l-2 border-primary">
-
-                                        <span class="text-primary font-semibold text-sm">2021 – 2025</span>
-
-                                        <h3 class="font-bold mt-1 mb-1 text-lg">
-                                            B.S. in Software Engineering
-                                        </h3>
-
-                                        <p class="text-gray-600 text-sm leading-relaxed">
-                                            College of Information Science and Technology & Artificial Intelligence<br>
-                                            Nanjing Forestry University, Nanjing, Jiangsu, China
-                                        </p>
-
-                                        <p class="text-gray-500 text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            Focus on programming, algorithms, and geospatial data processing.
-                                        </p>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="flex justify-center lg:justify-end">
+          <div class="bg-white border border-gray-300 rounded-full shadow-sm p-1">
+            <img src="static/assets/img/photo.png" alt="Taige Luo" class="w-[180px] h-[180px] md:w-[200px] md:h-[200px] object-cover rounded-full">
+          </div>
         </div>
+      </div>
     </section>
 
-</main>
+    <!-- Education + Experience -->
+    <section class="bg-white border border-line rounded-xl shadow-card p-6 md:p-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-<!-- Footer -->
-<footer class="bg-dark text-white py-10">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <h2 class="text-xl font-bold">Taige Luo</h2>
+        <div>
+          <h2 class="text-[1.7rem] font-semibold mb-5">Education</h2>
+          <div class="space-y-6">
+
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                    <h3 class="text-[1.15rem] font-medium flex items-center gap-2">
+                        <img src="static/assets/img/vt.png" class="w-6 h-6 rounded-full object-cover">
+                        Virginia Tech
+                    </h3>
+                  <p class="text-gray-700 mt-1">Teaching Assistant</p>
+                  <p class="text-sm text-muted mt-1">Principles/Elements of GIS (GEOG 5064)</p>
+                </div>
+                <span class="text-muted italic whitespace-nowrap text-sm">2025 - Present</span>
+              </div>
             </div>
-
-            <div class="flex space-x-5 mb-4 md:mb-0">
-                <a href="https://github.com/luotiger123" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                    <i class="fa-brands fa-github text-xl"></i>
-                </a>
-                <a href="https://github.com/luotiger123" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                    <i class="fa-brands fa-twitter text-xl"></i>
-                </a>
-                <a href="https://github.com/luotiger123" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                    <i class="fa-brands fa-linkedin text-xl"></i>
-                </a>
-                <a href="https://scholar.google.com/citations?user=vmZpJxsAAAAJ&hl=zh-CN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                    <i class="fa-brands fa-google-scholar text-xl"></i>
-                </a>
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                    <h3 class="text-[1.15rem] font-medium flex items-center gap-2">
+                    <img src="static/assets/img/vt.png" class="w-6 h-6 rounded-full object-cover">
+                    Virginia Tech
+                    </h3>
+                  <p class="text-gray-700 mt-1">M.S. in Geography</p>
+                  <p class="text-sm text-muted mt-1">Advisor: Dr. Yang Shao</p>
+                  <p class="text-sm text-muted mt-1">Focus: Large-scale remote sensing mapping, cross-city applications, multi-source data fusion</p>
+                </div>
+                <span class="text-muted italic whitespace-nowrap text-sm">Aug. 2025 - Present</span>
+              </div>
             </div>
 
             <div>
-                <p class="text-gray-400 text-sm">Contact: <a href="" class="text-white hover:text-gray-300 transition-colors">taige@vt.edu</a></p>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                    <h3 class="text-[1.15rem] font-medium flex items-center gap-2">
+                        <img src="static/assets/img/njfu.png" class="w-6 h-6 rounded-full object-cover">
+                        Nanjing Forestry University
+                    </h3>
+                  <p class="text-gray-700 mt-1">B.S. in Software Engineering</p>
+                  <p class="text-sm text-muted mt-1">Advisor: Dr. Sheng Xu</p>
+                  <p class="text-sm text-muted mt-1">Focus: Individual tree crown detection, density estimation, intelligent leaf phenotyping</p>
+                </div>
+                <span class="text-muted italic whitespace-nowrap text-sm">Sep. 2021 - Jun. 2025</span>
+              </div>
             </div>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-[1.45rem] font-semibold mb-4">Honors & Awards</h3>
+            <ul class="space-y-2 text-gray-700 list-disc pl-5 leading-7">
+              <li>Virginia Tech Department of Geography Scholarship (Full Tuition Waiver + Teaching Assistantship)</li>
+              <li>Recommended for Graduate Admission Without Entrance Examination (Top 5%)</li>
+              <li>Meritorious Winner, Mathematical Contest in Modeling (MCM/ICM)</li>
+              <li>Second Prize, China Computer Design Competition</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500 text-sm">
-            <p>&copy; 2025 Taige Luo. All rights reserved.</p>
+        <div>
+          <h2 class="text-[1.7rem] font-semibold mb-5">Work Experience</h2>
+          <div class="space-y-6">
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-[1.15rem] font-medium">Virginia Tech</h3>
+                  <p class="text-gray-700 mt-1">Graduate Researcher</p>
+                  <p class="text-sm text-muted mt-1 leading-6">
+                    Conducting research on large-scale vegetation mapping and cross-city remote sensing applications. Integrating optical imagery, SAR radar, and LiDAR-derived elevation data for 3D forest canopy mapping and robust geospatial product generation.
+                  </p>
+                </div>
+                <span class="text-muted italic whitespace-nowrap text-sm">2025 - Present</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-[1.15rem] font-medium">Nanjing Forestry University</h3>
+                  <p class="text-gray-700 mt-1">Undergraduate Research Assistant</p>
+                  <p class="text-sm text-muted mt-1 leading-6">
+                    Worked on forestry remote sensing and individual-tree level analysis, including fine-grained crown detection, tree density estimation, and intelligent leaf phenotype extraction using computer vision and geospatial data processing methods.
+                  </p>
+                </div>
+                <span class="text-muted italic whitespace-nowrap text-sm">2023 - 2025</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-[1.15rem] font-medium">Related Topics</h3>
+                  <p class="text-gray-700 mt-1">GeoAI / Remote Sensing / Forestry Informatics</p>
+                  <p class="text-sm text-muted mt-1 leading-6">
+                    Interested in building robust AI models for forestry remote sensing, vegetation structure understanding, and large-area mapping across heterogeneous urban and ecological environments.
+                  </p>
+                </div>
+                <span class="text-muted italic whitespace-nowrap text-sm">Ongoing</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</footer>
 
-<script>
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-        const navbar = document.getElementById('navbar');
-        if (window.scrollY > 30) {
-            navbar.classList.add('py-2', 'shadow-md');
-            navbar.classList.remove('py-3', 'shadow-sm');
-        } else {
-            navbar.classList.add('py-3', 'shadow-sm');
-            navbar.classList.remove('py-2', 'shadow-md');
-        }
-    });
+      </div>
+    </section>
+  </main>
 
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-    menuToggle.addEventListener('click', function() {
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            // Close mobile menu if open
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Gallery modal functionality
-    const galleryItems = document.querySelectorAll('#gallery .group');
-    const galleryModal = document.getElementById('gallery-modal');
-    const modalImage = document.getElementById('modal-image');
-    const modalTitle = document.getElementById('modal-title');
-    const modalDescription = document.getElementById('modal-description');
-    const closeModal = document.getElementById('close-modal');
-
-    galleryItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const image = this.querySelector('img');
-            const title = this.querySelector('h3').textContent;
-            const description = this.querySelector('p').textContent;
-
-            modalImage.src = image.src;
-            modalTitle.textContent = title;
-            modalDescription.textContent = description;
-
-            galleryModal.classList.remove('opacity-0', 'pointer-events-none');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    closeModal.addEventListener('click', function() {
-        galleryModal.classList.add('opacity-0', 'pointer-events-none');
-        document.body.style.overflow = 'auto';
-    });
-
-    // Close modal when clicking outside the image
-    galleryModal.addEventListener('click', function(e) {
-        if (e.target === galleryModal) {
-            galleryModal.classList.add('opacity-0', 'pointer-events-none');
-            document.body.style.overflow = 'auto';
-        }
-    });
-</script>
+      });
+    }
+  </script>
 </body>
 </html>
