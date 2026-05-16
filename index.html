@@ -145,9 +145,9 @@
               <i class="fa-brands fa-github mr-1"></i> GitHub
             </a>
 
-            <a href="#" class="hover:underline">
+            <button id="wechatBtn" type="button" class="hover:underline text-link">
               <i class="fa-brands fa-weixin mr-1"></i> WeChat
-            </a>
+            </button>
           </div>
         </div>
 
@@ -361,6 +361,35 @@
       </div>
     </section>
 
+  </main>
+
+  <!-- WeChat QR Code Modal -->
+  <div id="wechatModal" class="hidden fixed inset-0 z-[999] bg-black/50 flex items-center justify-center px-4">
+    <div class="relative bg-white rounded-2xl shadow-xl p-6 w-full max-w-[320px] text-center">
+      
+      <button 
+        id="wechatCloseBtn" 
+        type="button"
+        class="absolute top-3 right-4 text-gray-400 hover:text-gray-700 text-2xl leading-none"
+        aria-label="Close WeChat QR Code"
+      >
+        &times;
+      </button>
+
+      <h3 class="text-lg font-semibold mb-4">WeChat QR Code</h3>
+
+      <img 
+        src="static/assets/img/wechat.png" 
+        alt="WeChat QR Code" 
+        class="w-[230px] h-[230px] object-contain mx-auto rounded-lg border border-line"
+      >
+
+      <p class="mt-4 text-sm text-muted">
+        Scan the QR code to connect with me on WeChat.
+      </p>
+    </div>
+  </div>
+
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -368,6 +397,35 @@
     if (menuBtn && mobileMenu) {
       menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    const wechatBtn = document.getElementById('wechatBtn');
+    const wechatModal = document.getElementById('wechatModal');
+    const wechatCloseBtn = document.getElementById('wechatCloseBtn');
+
+    function openWechatModal() {
+      wechatModal.classList.remove('hidden');
+    }
+
+    function closeWechatModal() {
+      wechatModal.classList.add('hidden');
+    }
+
+    if (wechatBtn && wechatModal && wechatCloseBtn) {
+      wechatBtn.addEventListener('click', openWechatModal);
+      wechatCloseBtn.addEventListener('click', closeWechatModal);
+
+      wechatModal.addEventListener('click', (event) => {
+        if (event.target === wechatModal) {
+          closeWechatModal();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeWechatModal();
+        }
       });
     }
   </script>
